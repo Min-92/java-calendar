@@ -7,7 +7,7 @@ public class Sum {
 	public static void main(String[] args) {
 		//입력 : 키보드
 		//출력 : 화면에 두수의 합을 출력
-		int a,b;
+		int a, b;
 		
 		System.out.println(" 두 수를 입력하시오.");
 		Scanner scanner = new Scanner(System.in);
