@@ -84,35 +84,6 @@ public class Calender {
 	
 		//영상내용
 		
-		Scanner scanner = new Scanner(System.in);
-		Calender calender = new Calender();
-		
-		System.out.println("반복횟수를 입력하세요");
-		int cycle = scanner.nextInt();
-		
-		for (int i = 0; i < cycle; i++) {
-			System.out.println("달을 입력하세요");
-			int month = scanner.nextInt();
-			
-			System.out.println(month+"월은"+calender.getMaxDaysOfMonth(month)+"까지 있습니다.");
-		}
-		System.out.println("Done.");
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-//		
-//		String PROMPT="cal> ";
 //		Scanner scanner = new Scanner(System.in);
 //		Calender calender = new Calender();
 //		
@@ -121,11 +92,40 @@ public class Calender {
 //		
 //		for (int i = 0; i < cycle; i++) {
 //			System.out.println("달을 입력하세요");
-//			System.out.print(PROMPT); 
-//			int month = 
+//			int month = scanner.nextInt();
+//			
+//			System.out.println(month+"월은"+calender.getMaxDaysOfMonth(month)+"까지 있습니다.");
 //		}
-//		
-//		
+//		System.out.println("Done.");
+		
+		
+		
+		//종료조건 이용하여 반복하기
+		
+		
+		
+		String PROMPT="cal> ";
+		Scanner scanner = new Scanner(System.in);
+		Calender calender = new Calender();
+		
+		
+		while(true) {
+			System.out.println("달을 입력하세요");
+			System.out.print(PROMPT); 
+			int month = scanner.nextInt();
+			
+			if(month == -1) {
+				break;
+			}
+			
+			if(month > 12) {
+				continue;
+			}
+			System.out.println(month+"월은"+calender.getMaxDaysOfMonth(month)+"까지 있습니다.");
+		}
+		System.out.println("Done.");
+	
+		
 		
 	
 	
